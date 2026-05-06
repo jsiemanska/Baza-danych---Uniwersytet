@@ -1,25 +1,14 @@
-# Baza-danych---Uniwersytet
-Prosty system zarządzania danymi akademickimi z interfejsem w R Shiny. Uproszczenie systemu USOS - zarządzanie studentami, grupami zajęciowymi, salami, planami zajęć.
+# System Zarządzania Uczelnią (SQL + Python Generator)
 
-## Użyte narzędzia
-- **PostgreSQL**
-- **SQL**
-- **R + Shiny**
+Projekt relacyjnej bazy danych obsługującej strukturę uczelni, kadrę akademicką oraz studentów. Zawiera triggery dbające o limity miejsc w grupach oraz automatyczny generator danych.
 
-## Zakres funkcjonalny
+## Funkcje
+- **Struktura SQL**: Pełny schemat bazy (tabele, relacje, klucze obce).
+- **Automatyzacja**: Skrypt Python generujący setki realistycznych rekordów (350 studentów, 30 wykładowców).
+- **Logika biznesowa**: Triggery pilnujące limitów zapisów.
 
-### Baza danych:
-- **Studenci, kierunki, przedmioty, instytuty**
-- **Wyświetlanie planów zajęć studentów i wykładowców**
-- **Logika ograniczeń**:
-  - Limity miejsc w grupach
-  - Kolizje sal zajęciowych
-  - Weryfikacja semestrów studiów
-
-### Interfejs
-- **Przegląd studentów danego kierunku**
-- **Dodawanie oraz usuwanie studentów, zmienianie studiowanego kierunku**
-- **Wyświetlanie planu zajęć danej grupy oraz listy zapisanych studentów**
-- **Wyświetlanie limitów grup i dopisywanie do nich studentów**
-  
-
+## Jak uruchomić?
+1. Sklonuj repozytorium.
+2. Uruchom skrypt generujący dane:
+   ```bash
+   python generator.py
